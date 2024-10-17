@@ -20,10 +20,16 @@ func GuessingGame() {
 			fmt.Println("Richtig geraten :-)")
 			return
 		} else {
+			if guess < my_number {
+				fmt.Println("Die gesuchte Zahl ist größer")
+			} else {
+				fmt.Println("Die gesuchte Zahl ist kleiner")
+			}
 			fmt.Println("Falsch geraten (Muhaha)")
 		}
 	}
 	fmt.Println("Zu viele falsche Zahlen :-(")
+	fmt.Println("Die richtige Zahl war: ", my_number)
 }
 
 func NumberGood(g, e int) bool {
